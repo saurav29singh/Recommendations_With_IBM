@@ -17525,11 +17525,19 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Answer:</strong></p>
-<p><em>From the graph we can conclude that</em>
-<em>1. The accuracy of training data <strong>set increases with number of latent features</strong>,</em>
-<em>2. The accuracy of test data <strong>gradually decreases this is because more latent features</strong>,</em>
-<em>This will just act as a noise and result in poor accuracy.</em>
-<em>3. It seems like 100 latent features best describe the variability of the dataset and best suited for building recommendations.</em></p>
+<p><em>From the graph we can conclude few questions</em>
+<em>1. why the training accuracy was so high?</em>
+    <em>We can see overall high levels of recommendation accuracy as the accuracy of training data <strong>set increases with number of latent features</strong>(near to 100%), whereas the accuracy of test data <strong>gradually decreases this is because more latent features</strong>(near to 96.5%). As the accuracy score seems very high this is largely due to the imbalance between the two classes, we have many more 0's than 1's.</em></p>
+<pre><code>- In this situation, the accuracy is not appropriate, because predicted interactions between users and articles are very few (imbalanced).
+
+</code></pre>
+<p><em>2. well this recommendation engine would work in practice?</em>
+    <em>I would say still improvement required to build a better recommendation system as it is not able to overcome cold-start problem. Some other ML model can help us to handle imbalance in dataset and decrease false negative.</em></p>
+<pre><code>- Ranked based recommendation can be used for new user and solve the cold start problems
+
+</code></pre>
+<p><em>3. if accuracy is the right choice of metric for the problem at hand?</em>
+    <em>We can use A/B test that would show one group only the rank based recommendations while the B group would see only the matrix recommendations.We could split the users by cookie based diversion, so that an equal number of cookies are split between A and B groups</em></p>
 
 </div>
 </div>
@@ -17714,7 +17722,7 @@ matches:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
@@ -17734,7 +17742,7 @@ matches:
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
 
 
 
